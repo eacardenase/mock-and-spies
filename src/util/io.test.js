@@ -2,9 +2,11 @@ import { it, expect } from 'vitest';
 
 import writeData from './io';
 
-it('should execute the writeFile method', () => {
+it('should execute the writeFile method', async () => {
     const testData = 'Test';
     const testFileName = 'test.txt';
 
-    return expect(writeData(testData, testFileName)).resolves.toBeUndefined();
+    const result = await writeData(testData, testFileName);
+
+    return expect(result).toBeUndefined();
 });

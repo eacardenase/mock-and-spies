@@ -8,6 +8,6 @@ describe('generateReportData(', () => {
 
         generateReportData(logger);
 
-        expect(logger).toBeCalledTimes(2);
+        expect(logger).toBeCalled();
     });
 });
